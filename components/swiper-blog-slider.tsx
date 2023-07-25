@@ -12,6 +12,7 @@ import "swiper/css/pagination"
 // import required modules
 import { Pagination } from "swiper/modules"
 import Image from "next/image"
+import { RefAttributes } from "react"
 
 const slides = [
   {
@@ -47,6 +48,8 @@ export function SwiperBlogSlider() {
     <div className="w-full">
       <div className="ml-[30%]">
         <Swiper
+          // @ts-ignore
+          {...({} as IntrinsicAttributes & RefAttributes)}
           slidesPerView={3}
           spaceBetween={30}
           // pagination={{

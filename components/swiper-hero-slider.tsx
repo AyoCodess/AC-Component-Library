@@ -29,7 +29,12 @@ const slides = [
   },
 ]
 
-import React, { useRef, useState } from "react"
+import React, {
+  RefAttributes,
+  useRef,
+  useState,
+  IntrinsicAttributes,
+} from "react"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -39,7 +44,6 @@ import "swiper/css/pagination"
 
 // import required modules
 import { Pagination } from "swiper/modules"
-
 
 export function SwiperHeroSlider() {
   const pagination = {
@@ -53,9 +57,12 @@ export function SwiperHeroSlider() {
     },
   }
 
+  type T = any
+
   return (
     <div className="mx-auto h-60 w-full">
       <Swiper
+        {...({} as IntrinsicAttributes & RefAttributes<T>)}
         pagination={pagination}
         modules={[Pagination]}
         className="mySwiper"
