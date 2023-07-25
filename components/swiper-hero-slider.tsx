@@ -45,9 +45,7 @@ export function SwiperHeroSlider() {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return (
-        '<span class="' + className + " " + 'mt-5 ">' + (index + 1) + "</span>"
-      )
+      return '<div class="' + className + ' custom-bullet"></div>'
     },
   }
 
@@ -59,27 +57,22 @@ export function SwiperHeroSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="h-60 w-full bg-red-100"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="h-60 w-full bg-red-200"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
           <div className="h-60 w-full bg-red-300"></div>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <div className="h-60 w-full bg-red-400"></div>
+          <div className="h-60 w-full bg-blue-300"></div>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <div className="h-60 w-full bg-red-500"></div>
+          <div className="h-60 w-full bg-gray-300"></div>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <div className="h-60 w-full bg-red-600"></div>
+          <div className="h-60 w-full bg-yellow-400"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-60 w-full bg-green-500"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-60 w-full bg-violet-300"></div>
         </SwiperSlide>
       </Swiper>
     </div>
