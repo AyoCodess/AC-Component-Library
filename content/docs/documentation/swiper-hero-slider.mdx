@@ -57,13 +57,13 @@ export default function App() {
   };
 
   return (
-    <>
+    <div className='h-96 w-full'>
       <Swiper
         pagination={pagination}
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide><div className='bg-red-300 h-96 w-full'></div></SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
@@ -73,7 +73,7 @@ export default function App() {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }
 
