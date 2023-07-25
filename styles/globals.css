@@ -2,13 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-bullet {
-  background-color: white;
-  width: 20px;
-  height: 4px;
-  border-radius: 0; /* Set the border-radius to 0 to make it rectangular */
-  margin: 0 5px; /* Add some margin between bullets for spacing */
-}
+
 
 @layer base {
   :root {
