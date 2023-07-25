@@ -45,7 +45,11 @@ export function SwiperHeroSlider() {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return '<div class="' + className + ' custom-bullet"></div>'
+      return (
+        '<div class="' +
+        className +
+        ' " style="background-color: white; width: 35px; height: 4px; border-radius: 0"></div>'
+      )
     },
   }
 
