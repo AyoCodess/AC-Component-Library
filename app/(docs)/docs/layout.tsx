@@ -6,7 +6,7 @@ interface DocsLayoutProps {
   children: React.ReactNode
 }
 
-const components = [{ title: "test", component: <MiscDivider /> }]
+
 
 export default function DocsLayout({ children }: DocsLayoutProps) {
   return (

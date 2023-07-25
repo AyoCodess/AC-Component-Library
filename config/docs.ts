@@ -39,6 +39,16 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation/article-section-slider",
           disabled: false,
         },
+        {
+          title: "Swiper Blog Slider",
+          href: "/docs/documentation/swiper-blog-slider",
+          disabled: false,
+        },
+        {
+          title: "Swiper Hero Slider",
+          href: "/docs/documentation/swiper-hero-slider",
+          disabled: false,
+        },
       ],
     },
     // {
