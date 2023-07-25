@@ -6,10 +6,6 @@ export const docsConfig: DocsConfig = {
       title: "Documentation",
       href: "/docs",
     },
-    {
-      title: "Guides",
-      href: "/guides",
-    },
   ],
   sidebarNav: [
     {
@@ -22,121 +18,108 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Documentation",
+      title: "Components",
       items: [
+        // {
+        //   title: "Introduction",
+        //   href: "/docs/documentation",
+        // },
+        // {
+        //   title: "Contentlayer",
+        //   href: "/docs/in-progress",
+        //   disabled: true,
+        // },
         {
-          title: "Introduction",
-          href: "/docs/documentation",
-        },
-        {
-          title: "Contentlayer",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Test",
-          href: "/docs/documentation/test",
+          title: "Animated Div Split",
+          href: "/docs/documentation/animated-div-split",
           disabled: false,
-          component: "test",
         },
         {
-          title: "Components",
-          href: "/docs/documentation/components",
-        },
-        {
-          title: "Code Blocks",
-          href: "/docs/documentation/code-blocks",
-        },
-        {
-          title: "Style Guide",
-          href: "/docs/documentation/style-guide",
-        },
-        {
-          title: "Search",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "Article Section Slider",
+          href: "/docs/documentation/article-section-slider",
+          disabled: false,
         },
       ],
     },
-    {
-      title: "Blog",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Build your own",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Writing Posts",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Dashboard",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Layouts",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Server Components",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Authentication",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Database with Prisma",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "API Routes",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Marketing Site",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "File Structure",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Tailwind CSS",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Typography",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
+    // {
+    //   title: "Blog",
+    //   items: [
+    //     {
+    //       title: "Introduction",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Build your own",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Writing Posts",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Dashboard",
+    //   items: [
+    //     {
+    //       title: "Introduction",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Layouts",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Server Components",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Authentication",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Database with Prisma",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "API Routes",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Marketing Site",
+    //   items: [
+    //     {
+    //       title: "Introduction",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "File Structure",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Tailwind CSS",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //     {
+    //       title: "Typography",
+    //       href: "/docs/in-progress",
+    //       disabled: true,
+    //     },
+    //   ],
+    // },
   ],
 }

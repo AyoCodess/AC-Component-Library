@@ -13,6 +13,8 @@ import { Metadata } from "next"
 import { env } from "@/env.mjs"
 import { absoluteUrl } from "@/lib/utils"
 import { MiscDivider } from "@/components/misc-divider"
+import { ArticleSectionSlider } from "@/components/article-section-slider"
+import { ResizableDiv, ResizeArea } from "@/components/resize-area"
 
 interface DocPageProps {
   params: {
@@ -90,16 +92,35 @@ export default async function DocPage({ params }: DocPageProps) {
 
   const toc = await getTableOfContents(doc.body.raw)
 
-  const components = [{ Title: "Test", component: <MiscDivider /> }]
+  const components = [
+    {
+      Title: "Animated Div Split",
+      component: <MiscDivider />,
+      resizeWidth: 360,
+    },
+    {
+      Title: "Article Section Slider",
+      component: <ArticleSectionSlider />,
+      resizeWidth: 600,
+    },
+  ]
 
   return (
-    <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_300px]">
+    <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_100px]">
       <div className="mx-auto w-full min-w-0">
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <Mdx code={doc.body.code} />
-        <div className="mx-auto">
-          {components.find((item) => item.Title === doc.title)?.component}
-        </div>
+
+        <ResizeArea
+          initialWidth={
+            components.find((item) => item.Title === doc.title)?.resizeWidth
+          }
+          component={
+            <div className="mx-auto">
+              {components.find((item) => item.Title === doc.title)?.component}
+            </div>
+          }
+        />
         <hr className="my-4 md:my-6" />
         <DocsPager doc={doc} />
       </div>
