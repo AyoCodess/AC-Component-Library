@@ -3,7 +3,7 @@ import { SiteConfig } from "types"
 export const siteConfig: SiteConfig = {
   name: "AC Library",
   description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
+    "A list of custom react tailwind and framer-motion custom components I have created for various projects.",
   url: "https://ayoadesanya.com",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
