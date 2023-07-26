@@ -9,15 +9,15 @@ export function ComponentSection({
   componentMobile,
   componentDesktop,
 }: {
-  initialWidth: { Desktop: number; Mobile: number } | undefined
-  initialHeight?: { Desktop: number; Mobile: number }
-  componentMobile: React.ReactNode
+  initialWidth: { Desktop: number; Mobile: number }
+  initialHeight: { Desktop: number; Mobile: number }
   componentDesktop: React.ReactNode
+  componentMobile: React.ReactNode
 }) {
   return (
     <ResizeArea
       initialWidth={initialWidth!}
-      initialHeight={initialHeight ?? null}
+      initialHeight={initialHeight!}
       componentMobile={componentMobile}
       componentDesktop={componentDesktop}
     />

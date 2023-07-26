@@ -18,6 +18,7 @@ export const components = [
     componentDesktop: <MiscDivider />,
     componentMobile: <MiscDividerMobile />,
     resizeWidth: { Desktop: 600, Mobile: 360 },
+    resizeHeight: { Desktop: 600, Mobile: 360 },
   },
   {
     Title: "Article Section Slider",
@@ -31,11 +32,13 @@ export const components = [
     componentDesktop: <SwiperBlogSlider />,
     componentMobile: <SwiperBlogSliderMobile />,
     resizeWidth: { Desktop: 600, Mobile: 360 },
+    resizeHeight: { Desktop: 600, Mobile: 360 },
   },
   {
     Title: "Swiper Hero Slider",
     componentDesktop: <SwiperHeroSlider />,
     componentMobile: <SwiperHeroSliderMobile />,
     resizeWidth: { Desktop: 600, Mobile: 360 },
+    resizeHeight: { Desktop: 600, Mobile: 360 },
   },
 ]

@@ -8,7 +8,6 @@ import { MdxCard } from "@/components/mdx-card"
 
 
 const components = {
-
   h1: ({ className, ...props }) => (
     <h1
       className={cn(
@@ -162,7 +161,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code)
 
   return (
-    <div className="mdx ">
+    <div className="mdx">
       <Component components={components} />
     </div>
   )

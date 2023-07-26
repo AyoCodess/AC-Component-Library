@@ -15,8 +15,6 @@ import { absoluteUrl } from "@/lib/utils"
 import { ComponentSection } from "@/components/components-section"
 import { components } from "@/config/components"
 
-import copy from "react-copy-to-clipboard"
-import { MdxClient } from "@/components/mdx-client"
 
 interface DocPageProps {
   params: {
@@ -98,30 +96,27 @@ export default async function DocPage({ params }: DocPageProps) {
     <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_100px]">
       <div className="mx-auto w-full min-w-0">
         <DocsPageHeader heading={doc.title} text={doc.description} />
-
-        <MdxClient code={doc.body.code} />
+        <Mdx code={doc.body.code} />
         {doc.title !== "Documentation" ? (
           <ComponentSection
             initialWidth={
-              components.find((item) => item.Title === doc.title)?.resizeWidth
+              components.find((item) => item.Title === doc.title)
+                ?.resizeWidth! ?? "unknown"
             }
             initialHeight={
-              components.find((item) => item.Title === doc.title)?.resizeHeight
+              components.find((item) => item.Title === doc.title)
+                ?.resizeHeight! ?? "unknown"
             }
             componentDesktop={
               <div className="mx-auto">
-                {
-                  components.find((item) => item.Title === doc.title)
-                    ?.componentDesktop
-                }
+                {components.find((item) => item.Title === doc.title)
+                  ?.componentDesktop ?? "unknown"}
               </div>
             }
             componentMobile={
               <div className="mx-auto">
-                {
-                  components.find((item) => item.Title === doc.title)
-                    ?.componentMobile
-                }
+                {components.find((item) => item.Title === doc.title)
+                  ?.componentMobile ?? "unknown"}
               </div>
             }
           />

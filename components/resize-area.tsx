@@ -1,11 +1,11 @@
 "use client"
 
-import { set } from "date-fns"
+
 import { useReducer, useState } from "react"
 import { Resizable } from "react-resizable"
 import "react-resizable/css/styles.css" // Import the styles for the resizable component
 
-function handleComponentSwitch(state, action) {
+function handleComponentSwitch(state: any, action: any) {
   switch (action) {
     case "mobile":
       return { type: "mobile", width: 300 }
@@ -25,16 +25,12 @@ export function ResizeArea({
   componentMobile: React.ReactNode
   componentDesktop: React.ReactNode
   initialWidth: { Desktop: number; Mobile: number }
-  initialHeight?: { Desktop: number; Mobile: number } | null
+  initialHeight: { Desktop: number; Mobile: number }
 }) {
   const [widthMobile, setWidthMobile] = useState(initialWidth.Mobile)
   const [widthDesktop, setWidthDesktop] = useState(initialWidth.Desktop)
-  const [heightMobile, setHeightMobile] = useState(
-    initialHeight?.Mobile ?? null
-  )
-  const [heightDesktop, setHeightDesktop] = useState(
-    initialHeight?.Desktop ?? null
-  )
+  const [heightMobile, setHeightMobile] = useState(initialHeight.Mobile)
+  const [heightDesktop, setHeightDesktop] = useState(initialHeight.Desktop)
 
   const [components, switchComponent] = useReducer(handleComponentSwitch, {
     type: "mobile",
