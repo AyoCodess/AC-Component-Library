@@ -50,7 +50,8 @@ export default async function IndexPage() {
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             This is list of react tailwind custom components with animations I
-            have created for my projects. I will be adding more as I go along.
+            have created for various projects. I will be adding more as I go
+            along.
           </p>
           <div className="space-x-4">
             <Link href="/docs" className={cn(buttonVariants({ size: "lg" }))}>
