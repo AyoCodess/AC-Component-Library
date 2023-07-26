@@ -46,7 +46,7 @@ const slides = [
 export function SwiperBlogSlider() {
   return (
     <div className="w-full">
-      <div className="ml-[30%]">
+      <div className="">
         <Swiper
           // @ts-ignore
           {...({} as IntrinsicAttributes & RefAttributes)}
@@ -57,6 +57,54 @@ export function SwiperBlogSlider() {
           // }}
           modules={[Pagination]}
           className="mySwiper"
+        >
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Slide />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </div>
+  )
+}
+
+export function SwiperBlogSliderMobile() {
+  return (
+    <div className="w-full ">
+      <div className="">
+        <Swiper
+          // @ts-ignore
+          {...({} as IntrinsicAttributes & RefAttributes)}
+          slidesPerView={3}
+          spaceBetween={30}
+          // pagination={{
+          //   clickable: true
+          // }}
+          modules={[Pagination]}
+          className="mySwiper "
         >
           <SwiperSlide>
             <Slide />

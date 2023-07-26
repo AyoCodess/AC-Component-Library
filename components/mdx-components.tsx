@@ -8,6 +8,7 @@ import { MdxCard } from "@/components/mdx-card"
 
 
 const components = {
+
   h1: ({ className, ...props }) => (
     <h1
       className={cn(

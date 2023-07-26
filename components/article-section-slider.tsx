@@ -81,6 +81,54 @@ export function ArticleSectionSlider() {
   )
 }
 
+export function ArticleSectionSliderMobile() {
+  const [selectedSlide, setSelectedSlide] = useState<Slide | null>(
+    slides[0].app
+  )
+  return (
+    <div className=" mx-4    ">
+      <div className="flex h-[30rem] w-full flex-col bg-white  ">
+        <div className="flex h-[10rem] flex-col  items-center justify-center py-6  ">
+          <ul className="flex flex-col items-center justify-center gap-4 ">
+            {slides.map((slide) => {
+              return Object.values(slide).map((slideItem) => {
+                return (
+                  <LinkComponent
+                    key={slideItem.label}
+                    label={slideItem.label}
+                    setSelectedSlide={setSelectedSlide}
+                    slide={slideItem}
+                  />
+                )
+              })
+            })}
+          </ul>
+        </div>
+        {/* slide area */}
+        <div className=" relative flex h-[20rem] flex-col border-l border-gray-100 sm:h-full ">
+          <AnimatePresence initial={false}>
+            {selectedSlide && (
+              <motion.div
+                className="h-full w-full "
+                key={selectedSlide.label}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.3,
+                }}
+              >
+                <Slide selectedSlide={selectedSlide} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 interface Slide {
   label: string
   src: string

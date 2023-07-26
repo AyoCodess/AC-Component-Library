@@ -12,8 +12,11 @@ import { Metadata } from "next"
 
 import { env } from "@/env.mjs"
 import { absoluteUrl } from "@/lib/utils"
-import { ResizeArea } from "@/components/resize-area"
+import { ComponentSection } from "@/components/components-section"
 import { components } from "@/config/components"
+
+import copy from "react-copy-to-clipboard"
+import { MdxClient } from "@/components/mdx-client"
 
 interface DocPageProps {
   params: {
@@ -95,16 +98,30 @@ export default async function DocPage({ params }: DocPageProps) {
     <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_100px]">
       <div className="mx-auto w-full min-w-0">
         <DocsPageHeader heading={doc.title} text={doc.description} />
-        <Mdx code={doc.body.code} />
 
+        <MdxClient code={doc.body.code} />
         {doc.title !== "Documentation" ? (
-          <ResizeArea
+          <ComponentSection
             initialWidth={
               components.find((item) => item.Title === doc.title)?.resizeWidth
             }
-            component={
+            initialHeight={
+              components.find((item) => item.Title === doc.title)?.resizeHeight
+            }
+            componentDesktop={
               <div className="mx-auto">
-                {components.find((item) => item.Title === doc.title)?.component}
+                {
+                  components.find((item) => item.Title === doc.title)
+                    ?.componentDesktop
+                }
+              </div>
+            }
+            componentMobile={
+              <div className="mx-auto">
+                {
+                  components.find((item) => item.Title === doc.title)
+                    ?.componentMobile
+                }
               </div>
             }
           />
