@@ -1,7 +1,7 @@
-import { ArticleSectionSlider } from "@/components/article-section-slider"
-import { MiscDivider } from "@/components/misc-divider"
-import { SwiperBlogSlider } from "@/components/swiper-blog-slider"
-import { SwiperHeroSlider } from "@/components/swiper-hero-slider"
+import { ArticleSectionSlider } from "@/components/ac-library/article-section-slider"
+import { MiscDivider } from "@/components/ac-library/misc-divider"
+import { SwiperBlogSlider } from "@/components/ac-library/swiper-blog-slider"
+import { SwiperHeroSlider } from "@/components/ac-library/swiper-hero-slider"
 
 export const components = [
   {
