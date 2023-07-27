@@ -12,9 +12,10 @@ import { Metadata } from "next"
 
 import { env } from "@/env.mjs"
 import { absoluteUrl } from "@/lib/utils"
-import { ComponentSection } from "@/components/components-section"
-import { components } from "@/config/components"
 
+import { components } from "@/config/components"
+import { ComponentArea } from "@/components/resize-area"
+import { ComponentCode } from "@/components/component-code"
 
 interface DocPageProps {
   params: {
@@ -98,28 +99,22 @@ export default async function DocPage({ params }: DocPageProps) {
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <Mdx code={doc.body.code} />
         {doc.title !== "Documentation" ? (
-          <ComponentSection
-            initialWidth={
-              components.find((item) => item.Title === doc.title)
-                ?.resizeWidth! ?? "unknown"
-            }
-            initialHeight={
-              components.find((item) => item.Title === doc.title)
-                ?.resizeHeight! ?? "unknown"
-            }
-            componentDesktop={
-              <div className="mx-auto">
-                {components.find((item) => item.Title === doc.title)
-                  ?.componentDesktop ?? "unknown"}
-              </div>
-            }
-            componentMobile={
-              <div className="mx-auto">
-                {components.find((item) => item.Title === doc.title)
-                  ?.componentMobile ?? "unknown"}
-              </div>
-            }
-          />
+          <div>
+            <ComponentCode
+              code={
+                components.find((item) => item.Title === doc.title)?.code ??
+                "unknown"
+              }
+            />
+            <ComponentArea
+              component={
+                <div className="mx-auto">
+                  {components.find((item) => item.Title === doc.title)
+                    ?.component ?? "unknown"}
+                </div>
+              }
+            />
+          </div>
         ) : null}
         <hr className="my-4 md:my-6" />
         <DocsPager doc={doc} />
