@@ -42,7 +42,7 @@ export function MiscDivider() {
                 }
               : {}
           }
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: [0, 0, 0.2, 1] }}
           className=" absolute right-[52%] h-48 w-48 bg-blue-200"
         />
       </div>
