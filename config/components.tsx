@@ -36,7 +36,7 @@ export function MiscDivider() {
                 }
               : {}
           }
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: [0, 0, 0.2, 1] }}
           className=" absolute left-[52%] h-28 w-28 bg-blue-200"
         />
         <div className="h-40 w-40 bg-blue-400" />
