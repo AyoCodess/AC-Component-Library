@@ -17,12 +17,10 @@ export function MiscDivider() {
     <div className="mx-auto w-fit">
       <div
         onMouseEnter={() => {
-          setIsHovered(true)
-          console.log("is hovered")
+          setIsHovered(true)   
         }}
         onMouseLeave={() => {
           setIsHovered(false)
-          console.log("is not ")
         }}
         className="relative flex items-center justify-center  "
       >

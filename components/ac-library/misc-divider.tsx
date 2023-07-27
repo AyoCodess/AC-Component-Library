@@ -10,11 +10,9 @@ export function MiscDivider() {
       <div
         onMouseEnter={() => {
           setIsHovered(true)
-          console.log("is hovered")
         }}
         onMouseLeave={() => {
           setIsHovered(false)
-          console.log("is not ")
         }}
         className="relative flex items-center justify-center  "
       >
