@@ -151,6 +151,7 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
+
 }
 
 interface MdxProps {
