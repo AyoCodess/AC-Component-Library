@@ -38,7 +38,7 @@ export function ArticleSectionSlider() {
     slides[0].app
   )
   return (
-    <div className=" mx-4 lg:mx-auto lg:max-w-4xl  ">
+    <div className=" mx-4  lg:mx-auto lg:max-w-4xl  ">
       <div className="flex w-full flex-col bg-white sm:h-96 sm:flex-row  ">
         <div className="flex h-full flex-col  items-center justify-center py-6 sm:w-1/2 sm:py-0">
           <ul className="flex flex-col items-center justify-center gap-4 sm:items-start sm:justify-start">
@@ -57,7 +57,7 @@ export function ArticleSectionSlider() {
           </ul>
         </div>
         {/* slide area */}
-        <div className=" relative flex h-[20rem] flex-col border-l border-gray-100 sm:h-full sm:w-1/2">
+        <div className=" relative flex h-[28rem]  flex-col border-l border-gray-100 sm:h-full sm:w-1/2">
           <AnimatePresence initial={false}>
             {selectedSlide && (
               <motion.div
