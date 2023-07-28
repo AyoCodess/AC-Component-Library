@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
+import { useMenuStore } from "@/stores/menu_store"
 
 interface MainNavProps {
   items?: MainNavItem[]
@@ -16,8 +17,8 @@ interface MainNavProps {
 }
 
 export function MainNav({ items, children }: MainNavProps) {
+  const { isOpen, setIsOpen } = useMenuStore()
   const segment = useSelectedLayoutSegment()
-  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -48,14 +49,14 @@ export function MainNav({ items, children }: MainNavProps) {
       ) : null}
       <button
         className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
+        onClick={() => {
+          setIsOpen(!isOpen)
+        }}
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.logo />}
+        {isOpen ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
+      {isOpen && items && <MobileNav items={items}>{children}</MobileNav>}
     </div>
   )
 }

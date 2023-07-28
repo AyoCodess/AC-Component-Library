@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import MenuClickBoundaryClient from "@/lib/menu_click_boundary_client"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -83,7 +84,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <MenuClickBoundaryClient>{children}</MenuClickBoundaryClient>
           <Analytics />
           <Toaster />
           <TailwindIndicator />
