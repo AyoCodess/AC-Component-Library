@@ -43,6 +43,38 @@ const slides = [
   },
 ]
 
+
+const slides2 = [
+  {
+    name: "app",
+    label: "The App slide",
+    src: "/images/work3.jpg",
+    description:
+      "The App Slide - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat at expedita ea recusandae reprehenderit hic accusantium, facere cumque maiores rem tempore voluptates accusamus atque veritatis, tenetur excepturi corporis sint natus!",
+  },
+  {
+    name: " web ",
+    label: "The Web slide",
+    src: "/images/blog/2.jpeg",
+    description:
+      "The web slide - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat at expedita ea recusandae reprehenderit hic accusantium, facere cumque maiores rem tempore voluptates accusamus atque veritatis, tenetur excepturi corporis sint natus!",
+  },
+  {
+    ux: "ux",
+    label: "The UX slide",
+    src: "/images/blog/3.jpeg",
+    description:
+      "the ux side - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat at expedita ea recusandae reprehenderit hic accusantium, facere cumque maiores rem tempore voluptates accusamus atque veritatis, tenetur excepturi corporis sint natus!",
+  },
+  {
+    system: "system",
+    label: "The System slide",
+    src: "/images/work2.jpg",
+    description:
+      "the system side - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat at expedita ea recusandae reprehenderit hic accusantium, facere cumque maiores rem tempore voluptates accusamus atque veritatis, tenetur excepturi corporis sint natus!",
+  },
+]
+
 export function SwiperBlogSlider() {
   return (
     <div className="w-full">

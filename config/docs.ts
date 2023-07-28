@@ -49,6 +49,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation/swiper-hero-slider",
           disabled: false,
         },
+        {
+          title: "Swiper Background Slider",
+          href: "/docs/documentation/swiper-background-slider",
+          disabled: false,
+        },
       ],
     },
     // {
