@@ -23,6 +23,8 @@ export default function SwiperCardSlider() {
   return (
     <div className="relative mx-auto h-full w-full ">
       <Swiper
+        // @ts-ignore
+        {...({} as IntrinsicAttributes & RefAttributes)}
         pagination={pagination}
         modules={[Pagination]}
         className="mySwiper"
