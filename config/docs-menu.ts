@@ -32,7 +32,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Animated Div Split",
           href: "/docs/documentation/animated-div-split",
-          disabled: false,
+          disabled: true,
         },
         {
           title: "Article Section Slider",
@@ -57,6 +57,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Swiper Card Slider",
           href: "/docs/documentation/swiper-card-slider",
+          disabled: true,
+        },
+        {
+          title: "Swiper Logo Slider",
+          href: "/docs/documentation/swiper-logo-slider",
           disabled: false,
         },
       ],

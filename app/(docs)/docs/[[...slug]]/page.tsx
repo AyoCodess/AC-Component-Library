@@ -13,7 +13,7 @@ import { Metadata } from "next"
 import { env } from "@/env.mjs"
 import { absoluteUrl } from "@/lib/utils"
 
-import { components } from "@/config/components"
+import { components } from "@/config/component-code-snippets"
 import { ComponentArea } from "@/components/component-area"
 import { ComponentCode } from "@/components/component-code"
 

@@ -7,7 +7,7 @@
     "url": "https://twitter.com/ayo_imagines"
   },
   "scripts": {
-    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
+    "dev": "concurrently \"contentlayer dev\" \"next dev -p 3017 & open http://localhost:3017\"",
     "build": "contentlayer build && next build",
     "turbo": "next dev --turbo",
     "start": "next start",

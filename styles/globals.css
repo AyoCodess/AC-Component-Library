@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+
 
 
 @layer base {
