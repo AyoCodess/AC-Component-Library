@@ -258,7 +258,7 @@ function AnimatedUnderline(props: {
 `,
   },
   {
-    title: "swiper-background-slider-029031",
+    title: "swiper-blog-slider-821031",
     component: <SwiperBlogSlider />,
     code: `"use client"
 
