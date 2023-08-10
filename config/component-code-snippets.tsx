@@ -9,7 +9,7 @@ import { SwiperLogoSlider } from "@/components/ac-library/swiper-logo-slider"
 
 export const components = [
   {
-    Title: "Animated Div Split",
+    title: "animated-div-split-909123",
     component: <MiscDivider />,
     code: `"use client"
 import { motion } from "framer-motion"
@@ -61,7 +61,7 @@ export function MiscDivider() {
 }`,
   },
   {
-    Title: "Article Section Slider",
+    title: "article-section-slider-092731",
     component: <ArticleSectionSlider />,
     code: `"use client"
 
@@ -258,7 +258,7 @@ function AnimatedUnderline(props: {
 `,
   },
   {
-    Title: "Swiper Blog Slider",
+    title: "swiper-background-slider-029031",
     component: <SwiperBlogSlider />,
     code: `"use client"
 
@@ -390,7 +390,7 @@ function Slide({}: {}) {
 `,
   },
   {
-    Title: "Swiper Hero Slider",
+    title: "swiper-hero-slider-810200",
     component: <SwiperHeroSlider />,
     code: `"use client"
 
@@ -481,7 +481,7 @@ export function SwiperHeroSlider() {
 `,
   },
   {
-    Title: "Swiper Background Slider",
+    title: "swiper-background-slider-029031",
     component: <SwiperBackgroundSlider />,
     code: `"use client"
 
@@ -553,7 +553,7 @@ export function SwiperBackgroundSlider() {
 `,
   },
   {
-    Title: "Swiper Card Slider",
+    title: "swiper-card-slider-120922",
     component: <SwiperCardSlider />,
     code: `"use client"
 
@@ -625,7 +625,7 @@ export function SwiperBackgroundSlider() {
 `,
   },
   {
-    Title: "Swiper Logo Slider",
+    title: "swiper-logo-slider-001202",
     component: <SwiperLogoSlider />,
     code: `"use client"
 

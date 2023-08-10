@@ -102,14 +102,14 @@ export default async function DocPage({ params }: DocPageProps) {
           <div>
             <ComponentCode
               code={
-                components.find((item) => item.Title === doc.title)?.code ??
+                components.find((item) => item.title === doc.docTitle)?.code ??
                 "unknown"
               }
             />
             <ComponentArea
               component={
                 <div className="mx-auto">
-                  {components.find((item) => item.Title === doc.title)
+                  {components.find((item) => item.title === doc.docTitle)
                     ?.component ?? "unknown"}
                 </div>
               }
